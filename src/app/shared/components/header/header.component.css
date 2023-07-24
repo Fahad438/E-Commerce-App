@@ -1,0 +1,21 @@
+nav{
+  background-color: cadetblue;
+}
+.content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  /* this width to space betweem */
+  width: 30%;
+}
+ul li{
+cursor: pointer;
+font-size: 22px;
+}
