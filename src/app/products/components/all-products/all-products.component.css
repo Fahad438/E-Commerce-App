@@ -14,19 +14,20 @@ span {
   margin: 180px auto;
   max-width: 550px;
   background-color: white;
-  display: flex;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .image {
-  width: 50%;
-  height: 100%;
+
+  margin: auto;
+
 }
 
 .image img {
-  display: block;
-  max-width: 100%;
+  padding: 20px 0;
+
+  width: 200px;
+  height: 300px;
 }
 
 .image .mob {
@@ -34,7 +35,9 @@ span {
 }
 
 .text {
-  width: 50%;
+  width: 80%;
+ margin: auto;
+
 }
 
 .text>p,
@@ -42,7 +45,7 @@ h1 {
   padding-top: 10px;
   padding-left: 50px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .text .per p {
@@ -105,8 +108,12 @@ h1 {
       padding-bottom: 20px;
   }
   .image {
-      width: 100%;
+    padding: 20px 0;
+      margin: auto;
   }
+  .image img {
+
+}
   .image .desc {
       display: none;
   }

@@ -24,6 +24,7 @@ export class AllProductsComponent implements OnInit {
     this.service.getAllProucts().subscribe((result:any)=>{
 
       this.product=result;
+      console.log(this.product)
 
     })
   }

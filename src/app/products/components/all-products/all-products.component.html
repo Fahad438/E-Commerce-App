@@ -11,12 +11,12 @@
 <div class="row">
 
 
-  <div class="col-lg-4 col-md-12 col-sm-12">
+  <div class="col-lg-4 col-md-12 col-sm-12" *ngFor="let item of product">
     <section class="card">
 
       <div class="image">
-        <div class="desc"><img src="./images/image-product-desktop.jpg"></div>
-        <div class="mob"> <img src="./images/image-product-mobile.jpg" alt="product-img"></div>
+        <div class="desc"><img src="{{item.image}}" ></div>
+        <div class="mob"> <img src="{{item.image}}" alt="product-img"></div>
 
       </div>
 
@@ -32,7 +32,7 @@
           CHANEL. </p>
 
         <div class="price">
-          <h1>$149.99</h1>
+          <h1>${{item.price}}</h1>
           <p>$169.99</p>
         </div>
 
