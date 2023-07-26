@@ -10,9 +10,9 @@ export class AllProductsComponent implements OnInit {
 
 
   //this array for take all data from api
-  product:any[]=[];
+  product: any[] = [];
 
-  constructor(private service:ProductsService){
+  constructor(private service: ProductsService) {
 
   }
 
@@ -20,13 +20,19 @@ export class AllProductsComponent implements OnInit {
   ngOnInit(): void {
     this.getProducts()
   }
-  getProducts(){
-    this.service.getAllProucts().subscribe((result:any)=>{
+  getProducts() {
+    this.service.getAllProucts().subscribe(
 
-      this.product=result;
-      console.log(this.product)
-
-    })
+      //case1:all good in api
+      (result: any) => {
+        this.product = result;
+        console.log(this.product)
+      },
+      // case2:we have erorr in api
+      eror => {
+        alert("Erorr")
+      }
+    )
   }
 
 }
