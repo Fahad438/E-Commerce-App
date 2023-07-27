@@ -1,21 +1,21 @@
 <div class="my-2 w-25                             ">
   <label for="" class="my-1">Catgories :</label>
-  <select class="form-control" name="" id="">
-    <option value="">1</option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4</option>
+  <select class="form-control" name="" id="" (change)="filterData($event)">
+    <option value="all">All</option>
+
+    <option value="{{x}}" *ngFor="let x of catg">{{x}}</option>
+
   </select>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="!lodingPage">
 
 
   <div class="col-lg-4 col-md-12 col-sm-12" *ngFor="let item of product">
     <section class="card">
 
       <div class="image">
-        <div class="desc"><img src="{{item.image}}" ></div>
+        <div class="desc"><img src="{{item.image}}"></div>
         <div class="mob"> <img src="{{item.image}}" alt="product-img"></div>
 
       </div>
@@ -26,7 +26,7 @@
         </div>
 
 
-        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <h1>{{item.title}}</h1>
 
         <p> A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of
           CHANEL. </p>
@@ -47,4 +47,9 @@
 
 
   </div>
+
+</div>
+<!-- this is spiner  -->
+<div class="cen text-center w-100" *ngIf="lodingPage" >
+  <app-spiner></app-spiner>
 </div>

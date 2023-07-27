@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { SpinerComponent } from './components/spiner/spiner.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SpinerComponent
+
   ],
   imports: [
     CommonModule,
@@ -16,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    SpinerComponent
 
   ]
 })

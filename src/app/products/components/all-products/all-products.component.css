@@ -35,7 +35,7 @@ span {
 }
 
 .text {
-  width: 80%;
+  width: 90%;
  margin: auto;
 
 }
@@ -44,8 +44,7 @@ span {
 h1 {
   padding-top: 10px;
   padding-left: 50px;
-  display: flex;
-  justify-content: center;
+
 }
 
 .text .per p {
@@ -63,8 +62,9 @@ h1 {
 }
 
 .text h1 {
+  height: 100px;
   padding-top: 0;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 
 .price {
@@ -72,10 +72,12 @@ h1 {
   display: flex;
   align-items: center;
   padding-top: 20px;
+
 }
 
 .price h1 {
   color: hsl(158, 36%, 37%);
+  font-size: 3.5rem;
 }
 
 .price p {
@@ -86,6 +88,7 @@ h1 {
 }
 
 .btn {
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -100,16 +103,23 @@ h1 {
   border: 0px;
   color: white;
 }
+.cen{
+  padding: 30% 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 
 @media (max-width:767px) {
   .card {
       flex-direction: column;
       width: 340px;
       padding-bottom: 20px;
+      margin: 30px auto;
   }
   .image {
     padding: 20px 0;
-      margin: auto;
   }
   .image img {
 
