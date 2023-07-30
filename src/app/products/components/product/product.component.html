@@ -1,0 +1,31 @@
+<section class="card">
+
+  <div class="image">
+    <div class="desc"><img src="{{item.image}}"></div>
+    <div class="mob"> <img src="{{item.image}}" alt="product-img"></div>
+
+  </div>
+
+  <div class="text">
+    <div class="per">
+      <p>PERFUME</p>
+    </div>
+
+
+    <h1>{{item.title}}</h1>
+
+    <p> A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of
+      CHANEL. </p>
+
+    <div class="price">
+      <h1>${{item.price}}</h1>
+      <p>$169.99</p>
+    </div>
+
+    <div class="btn">
+      <button (click)="add()"> <span><img src="images/icon-cart.svg" alt=""></span> Add to cart</button>
+    </div>
+
+  </div>
+
+</section>

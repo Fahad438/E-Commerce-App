@@ -1,0 +1,143 @@
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+}
+
+span {
+  margin-right: 10px;
+}
+
+.card {
+  margin: 180px auto;
+  max-width: 550px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.image {
+
+  margin: auto;
+
+}
+
+.image img {
+  padding: 20px 0;
+
+  width: 200px;
+  height: 300px;
+}
+
+.image .mob {
+  display: none;
+}
+
+.text {
+  width: 90%;
+ margin: auto;
+
+}
+
+.text>p,
+h1 {
+  padding-top: 10px;
+  padding-left: 50px;
+
+}
+
+.text .per p {
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.5rem;
+  padding-left: 50px;
+}
+
+.text p {
+  padding-top: 20px;
+  font-size: .9rem;
+  color: hsl(228, 12%, 48%);
+  line-height: 20px;
+}
+
+.text h1 {
+  height: 100px;
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
+.price {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+
+}
+
+.price h1 {
+  color: hsl(158, 36%, 37%);
+  font-size: 3.5rem;
+}
+
+.price p {
+  padding-top: 0;
+  padding-left: 19px;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+.btn {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.btn button {
+  padding: 12px 60px;
+  border-radius: 7px;
+  background-color: hsl(158, 36%, 38%);
+  border: 0px;
+  color: white;
+}
+.cen{
+  padding: 30% 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+@media (max-width:767px) {
+  .card {
+      flex-direction: column;
+      width: 340px;
+      padding-bottom: 20px;
+      margin: 30px auto;
+  }
+  .image {
+    padding: 20px 0;
+  }
+  .image img {
+
+}
+  .image .desc {
+      display: none;
+  }
+  .image .mob {
+      display: block;
+      border-end-end-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .text {
+    color: black;
+      width: 100%;
+  }
+  .btn button {
+      width: 80%;
+      margin: auto;
+  }
+}

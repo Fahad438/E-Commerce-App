@@ -12,6 +12,7 @@ export class AllProductsComponent implements OnInit {
   catg: any[] = [];
   //this is for spiner =>HTML
   lodingPage: boolean = false;
+  cartProduct: any[] = [];
 
 
   constructor(private service: ProductsService) {
@@ -72,6 +73,23 @@ export class AllProductsComponent implements OnInit {
         this.product = res;
       }
     )
+  }
+
+  addToCart(event: any) {
+    if ("cart" in localStorage){
+      this.cartProduct=JSON.parse(localStorage.getItem("cart")!)
+      let existCart=this.cartProduct.find(item=> item.id == event.id)
+     if(existCart){
+      alert('This product is add ')
+     }else{
+      this.cartProduct.push(event)
+      localStorage.setItem("cart",JSON.stringify(this.cartProduct))
+     }
+
+    }else{
+      this.cartProduct.push(event)
+      localStorage.setItem("cart",JSON.stringify(this.cartProduct))
+    }
   }
 
 }

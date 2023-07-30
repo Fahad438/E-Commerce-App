@@ -4,13 +4,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinerComponent } from './components/spiner/spiner.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SpinerComponent
+    SpinerComponent,
+    SelectComponent
 
   ],
   imports: [
@@ -20,7 +22,8 @@ import { SpinerComponent } from './components/spiner/spiner.component';
   ],
   exports:[
     HeaderComponent,
-    SpinerComponent
+    SpinerComponent,
+    SelectComponent
 
   ]
 })

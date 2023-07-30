@@ -1,55 +1,13 @@
 <div class="my-2 w-25                             ">
-  <label for="" class="my-1">Catgories :</label>
-  <select class="form-control" name="" id="" (change)="filterData($event)">
-    <option value="all">All</option>
-
-    <option value="{{x}}" *ngFor="let x of catg">{{x}}</option>
-
-  </select>
+  <app-select [data]="catg" [title]="'catgoris'" (selectedValue)="filterData($event)"></app-select>
 </div>
 
 <div class="row" *ngIf="!lodingPage">
-
-
   <div class="col-lg-4 col-md-12 col-sm-12" *ngFor="let item of product">
-    <section class="card">
-
-      <div class="image">
-        <div class="desc"><img src="{{item.image}}"></div>
-        <div class="mob"> <img src="{{item.image}}" alt="product-img"></div>
-
-      </div>
-
-      <div class="text">
-        <div class="per">
-          <p>PERFUME</p>
-        </div>
-
-
-        <h1>{{item.title}}</h1>
-
-        <p> A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of
-          CHANEL. </p>
-
-        <div class="price">
-          <h1>${{item.price}}</h1>
-          <p>$169.99</p>
-        </div>
-
-        <div class="btn">
-          <button>
-            <span><img src="images/icon-cart.svg" alt=""></span> Add to cart</button>
-        </div>
-
-      </div>
-
-    </section>
-
-
+    <app-product [item]="item" (card)="addToCart($event)"></app-product>
   </div>
-
 </div>
 <!-- this is spiner  -->
-<div class="cen text-center w-100" *ngIf="lodingPage" >
+<div class="cen text-center w-100" *ngIf="lodingPage">
   <app-spiner></app-spiner>
 </div>
