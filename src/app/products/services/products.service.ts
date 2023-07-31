@@ -24,4 +24,8 @@ export class ProductsService {
     return this.http.get('https://fakestoreapi.com/products/category/'+key )
 
   }
+  getSinglProduct(id:any){
+
+    return this.http.get('https://fakestoreapi.com/products/'+id)
+  }
 }

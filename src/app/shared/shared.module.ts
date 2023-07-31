@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinerComponent } from './components/spiner/spiner.component';
 import { SelectComponent } from './components/select/select.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,12 +19,16 @@ import { SelectComponent } from './components/select/select.component';
   imports: [
     CommonModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   exports:[
     HeaderComponent,
     SpinerComponent,
-    SelectComponent
+    SelectComponent,
+    FormsModule,
+    RouterModule
 
   ]
 })

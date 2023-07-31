@@ -76,19 +76,19 @@ export class AllProductsComponent implements OnInit {
   }
 
   addToCart(event: any) {
-    if ("cart" in localStorage){
-      this.cartProduct=JSON.parse(localStorage.getItem("cart")!)
-      let existCart=this.cartProduct.find(item=> item.id == event.id)
-     if(existCart){
-      alert('This product is add ')
-     }else{
-      this.cartProduct.push(event)
-      localStorage.setItem("cart",JSON.stringify(this.cartProduct))
-     }
+    if ("cart" in localStorage) {
+      this.cartProduct = JSON.parse(localStorage.getItem("cart")!)
+      let existCart = this.cartProduct.find(item => item.item.id == event.item.id)
+      if (existCart) {
+        alert('This product is add ')
+      } else {
+        this.cartProduct.push(event)
+        localStorage.setItem("cart", JSON.stringify(this.cartProduct))
+      }
 
-    }else{
+    } else {
       this.cartProduct.push(event)
-      localStorage.setItem("cart",JSON.stringify(this.cartProduct))
+      localStorage.setItem("cart", JSON.stringify(this.cartProduct))
     }
   }
 

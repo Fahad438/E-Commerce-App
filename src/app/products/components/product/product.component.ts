@@ -9,11 +9,14 @@ export class ProductComponent {
 
   @Input() item:any={};
   @Output()card=new EventEmitter;
+  addClick:boolean=false;
+  amount:number=0;
 
 
 
   add(){
-    this.card.emit(this.item)
+    this.card.emit({item:this.item,quantity:this.amount})
+
   }
 
 

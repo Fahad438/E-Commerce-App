@@ -87,22 +87,7 @@ h1 {
   text-decoration: line-through;
 }
 
-.btn {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-left: 25px;
-  padding-top: 20px;
-}
 
-.btn button {
-  padding: 12px 60px;
-  border-radius: 7px;
-  background-color: hsl(158, 36%, 38%);
-  border: 0px;
-  color: white;
-}
 .cen{
   padding: 30% 0 0 0;
   display: flex;
