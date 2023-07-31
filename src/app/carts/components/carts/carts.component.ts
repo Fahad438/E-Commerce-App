@@ -20,19 +20,21 @@ export class CartsComponent {
     this.getTotalPrice()
 
   }
-
+  //HERE we get data from localstorge
   getProduct() {
     if ("cart" in localStorage) {
       this.cartProduct = JSON.parse(localStorage.getItem("cart")!)
     }
-    console.log(this.cartProduct)
   }
 
+  //here we take change from input and set to lolcal storge
   detecedChange() {
     this.getTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProduct))
   }
 
+  //here we take index and go to item price then * item quantity ta take total price for item
+  //step 2 we add all item price to gat total price
   getTotalPrice() {
     this.total = 0;
     //x ==>index
@@ -41,12 +43,19 @@ export class CartsComponent {
     }
   }
 
+  //here we take index and go to selected item and deleted then refresh total price
   deleteItem(index: any) {
     this.cartProduct.splice(index, 1)
     this.getTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProduct))
 
   }
+
+  //here we checkOut carts
+  //step1 certe new array and take id and quantity
+  //step2 cerate new opject and add all data from array
+  //step3 call service and put opject in parametr and send to backend
+  //step4 clear all data from carts whene he finsh all and stute 200
   checkOut() {
     let products = this.cartProduct.map(item => {
       return { productId: item.item.id, quantity: item.quantity }
