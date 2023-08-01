@@ -51,7 +51,7 @@ export class CartsComponent {
 
   }
 
-  //here we checkOut carts
+  //here we checkOut carts :)
   //step1 certe new array and take id and quantity
   //step2 cerate new opject and add all data from array
   //step3 call service and put opject in parametr and send to backend
