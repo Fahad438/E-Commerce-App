@@ -72,6 +72,7 @@ export class CartsComponent {
       localStorage.setItem("cart", JSON.stringify(this.cartProduct))
 
       alert("you are odrer is submit")
+      alert("you are odrer is submit")
 
     })
 
